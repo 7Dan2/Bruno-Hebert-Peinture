@@ -1,0 +1,143 @@
+*,
+::before,
+::after
+{
+    box-sizing: border-box;
+}
+
+:root
+{
+    font-size: 1em;
+}
+/* -- A -- */
+
+/* -- B -- */
+
+/* -- C -- */
+.contact
+{
+    grid-area: 10 / 2 / 11 / 12;
+    border-bottom: 3px solid purple;
+    padding: 5px 20px;
+}
+
+.container
+{
+    display: grid;
+    grid-template-columns: repeat( 12, 1fr );
+    gap: 9px
+}
+
+
+/* -- I -- */
+
+
+.image
+{
+    border: 3px solid grey;
+    min-height: 300px;
+    border-radius: 3px;
+    box-shadow: 0 0 9px #000;
+}
+
+.image1
+{
+    grid-area: 6 / 2 / 7 / 5
+}
+
+.image2
+{
+    grid-area: 6 / 5 / 7 / 8
+}
+
+.image3
+{
+    grid-area: 6 / 8 / 7 / 12;
+}
+
+.image4
+{
+    grid-area: 7 / 2 / 8 / 6;
+}
+
+.image5
+{
+    grid-area: 7 / 6 / 8 / 12;
+}
+
+/* -- L -- */
+.logo
+
+{
+    grid-area: 1 / 2 / 2 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -- N -- */
+nav
+{
+    grid-area: 2 / 6 / 3 / 12;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+/* -- O -- */
+.offers
+{
+    grid-area: 4 / 2 / 5 / 12;
+    border-bottom: 3px solid #3b7ce1;
+    border-left: 6px solid #3b7ce1;
+    border-radius: 6px;
+    background: whitesmoke;
+    padding: 5px 20px;
+}
+
+/* -- P -- */
+p
+{
+    letter-spacing: 3px;
+    column-count: 2;
+    column-rule-style: solid;
+}
+
+/* -- R -- */
+.realisations
+{
+    grid-area: 5 / 2 / 6 / 12;
+    border-bottom: 3px solid green;
+    border-left: 6px solid green;
+    border-radius: 6px;
+    background: whitesmoke;
+    display: flex;
+    padding: 5px 20px;
+}
+
+/* -- T -- */
+.title
+{
+    grid-area: 1 / 5 / 3 / 12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.title > h1, h2
+{
+    color: #3b7ce1;
+}
+
+/* -- W -- */
+.whoAmI
+{
+    grid-area: 3 / 2 / 4 / 12;
+    border-bottom: 3px solid red;
+    border-left: 6px solid red;
+    border-radius: 6px;
+    background: whitesmoke;
+    padding: 5px 20px;
+}
