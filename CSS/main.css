@@ -10,6 +10,10 @@
     font-size: 1em;
     --text-color-lightpurple: #ca8ad3;
     --text-color-blue: #3b7ce1;
+    --background-off-white: #f4edde;
+    --background-kinf-of-white : rgb(190, 190, 190);
+    --background-kind-of-grey: rgb(135, 135, 135);
+    --background-deep-kind-of-grey: rgb(81, 81, 81);
 }
 
 html
@@ -32,13 +36,19 @@ html
 {
     display: grid;
     grid-template-columns: repeat( 12, 1fr );
-    gap: 9px
+    gap: 9px;
+    background: var(--background-deep-kind-of-grey);
 }
 
 h1
 {
-    display: inline-block;
+    /* display: inline-block; */
     color: var(--text-color-blue);
+}
+
+h3
+{
+    color: var(--text-color-lightpurple);
 }
 
 /* -- I -- */
@@ -81,24 +91,38 @@ h1
 {
     grid-area: 1 / 2 / 2 / 5;
     display: flex;
-    background: white;
+    background: var(--background-a-kind-of-white);
     align-items: center;
     justify-content: center;
     padding-top: 20px;
 }
 
 /* -- N -- */
-nav
+.navArea
 {
-    grid-area: 1 / 5 / 2 / 12;
+    grid-area: 1 / 2 / 2 / 12;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; 
+    position: sticky;
+    top: 0; 
+    margin: 18px 0;
+    background: var(--background-deep-kind-of-grey);
+}
+
+nav
+{
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    padding: 18px 0;
+    border-radius: 9px;
     border-top: 3px solid var(--text-color-blue);
     border-bottom: 3px solid var(--text-color-blue);
-    background: white;
-    position: sticky;
-    top: 0;
+    /* background: var(--background-deep-kind-of-grey); */
+    
 }
 
 nav a
@@ -106,16 +130,17 @@ nav a
     font-size: 1.2rem;
     text-decoration: none;
     color: var(--text-color-lightpurple);
-    border: 1px solid var(--text-color-lightpurple);
-    border-radius: 6px;
-    padding: 12px 20px;
+    /* border: 1px solid var(--text-color-lightpurple);
+    border-radius: 6px; */
+    padding: 12px 27px;
     transition: color 300ms ease-in-out;
 }
 
 nav a:hover
 {
     color: whitesmoke;
-    background: var(--text-color-lightpurple)
+    background: var(--text-color-lightpurple);
+    border-radius: 9px;
 }
 
 /* -- O -- */
@@ -145,7 +170,7 @@ p
     border-bottom: 3px solid green;
     border-left: 6px solid green;
     border-radius: 6px;
-    background: whitesmoke;
+    background: rgb(225, 225, 225);
     display: flex;
     padding: 5px 20px;
     scroll-margin-top: 9rem;
@@ -154,16 +179,19 @@ p
 /* -- T -- */
 .title
 {
-    grid-area: 2 / 6 / 3 / 12;
+    grid-area: 2 / 2 / 3 / 12;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 200px;
+    border-radius: 9px;
+    height: 254px;
+    background: var(--background-off-white)
 }
 
 .title > h1, h2
 {
     color: #3b7ce1;
+    letter-spacing: 3px;
 }
 
 /* -- W -- */
