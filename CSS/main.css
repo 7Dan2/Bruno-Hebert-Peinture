@@ -8,6 +8,13 @@
 :root
 {
     font-size: 1em;
+    --text-color-lightpurple: #ca8ad3;
+    --text-color-blue: #3b7ce1;
+}
+
+html
+{
+    scroll-behavior: smooth;
 }
 /* -- A -- */
 
@@ -17,8 +24,8 @@
 .contact
 {
     grid-area: 10 / 2 / 11 / 12;
-    border-bottom: 3px solid purple;
-    padding: 5px 20px;
+    border-bottom: 3px solid var(--text-color-lightpurple);
+    scroll-margin-top: 9rem;
 }
 
 .container
@@ -28,9 +35,13 @@
     gap: 9px
 }
 
+h1
+{
+    display: inline-block;
+    color: var(--text-color-blue);
+}
 
 /* -- I -- */
-
 
 .image
 {
@@ -67,33 +78,56 @@
 
 /* -- L -- */
 .logo
-
 {
-    grid-area: 1 / 2 / 2 / 4;
+    grid-area: 1 / 2 / 2 / 5;
     display: flex;
+    background: white;
     align-items: center;
     justify-content: center;
+    padding-top: 20px;
 }
 
 /* -- N -- */
 nav
 {
-    grid-area: 2 / 6 / 3 / 12;
+    grid-area: 1 / 5 / 2 / 12;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 10px;
+    border-top: 3px solid var(--text-color-blue);
+    border-bottom: 3px solid var(--text-color-blue);
+    background: white;
+    position: sticky;
+    top: 0;
+}
+
+nav a
+{
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--text-color-lightpurple);
+    border: 1px solid var(--text-color-lightpurple);
+    border-radius: 6px;
+    padding: 12px 20px;
+    transition: color 300ms ease-in-out;
+}
+
+nav a:hover
+{
+    color: whitesmoke;
+    background: var(--text-color-lightpurple)
 }
 
 /* -- O -- */
 .offers
 {
     grid-area: 4 / 2 / 5 / 12;
-    border-bottom: 3px solid #3b7ce1;
-    border-left: 6px solid #3b7ce1;
+    border-bottom: 3px solid var(--text-color-blue);
+    border-left: 6px solid var(--text-color-blue);
     border-radius: 6px;
     background: whitesmoke;
     padding: 5px 20px;
+    scroll-margin-top: 9rem;
 }
 
 /* -- P -- */
@@ -114,12 +148,13 @@ p
     background: whitesmoke;
     display: flex;
     padding: 5px 20px;
+    scroll-margin-top: 9rem;
 }
 
 /* -- T -- */
 .title
 {
-    grid-area: 1 / 5 / 3 / 12;
+    grid-area: 2 / 6 / 3 / 12;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,4 +175,5 @@ p
     border-radius: 6px;
     background: whitesmoke;
     padding: 5px 20px;
+    scroll-margin-top: 9rem;
 }
