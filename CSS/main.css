@@ -10,6 +10,7 @@
     font-size: 1em;
     --text-color-lightpurple: #ca8ad3;
     --text-color-blue: #3b7ce1;
+    --text-color-orange: #ff6200;
     --background-off-white: #f4edde;
     --background-kinf-of-white : rgb(190, 190, 190);
     --background-kind-of-grey: rgb(135, 135, 135);
@@ -37,13 +38,13 @@ html
     display: grid;
     grid-template-columns: repeat( 12, 1fr );
     gap: 9px;
-    background: var(--background-deep-kind-of-grey);
+    /* background: var(--background-deep-kind-of-grey); */
 }
 
 h1
 {
     /* display: inline-block; */
-    color: var(--text-color-blue);
+    color: white;
 }
 
 h3
@@ -107,7 +108,7 @@ h3
     position: sticky;
     top: 0; 
     margin: 18px 0;
-    background: var(--background-deep-kind-of-grey);
+    background: white;
 }
 
 nav
@@ -116,7 +117,6 @@ nav
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
     padding: 18px 0;
     border-radius: 9px;
     border-top: 3px solid var(--text-color-blue);
@@ -129,7 +129,7 @@ nav a
 {
     font-size: 1.2rem;
     text-decoration: none;
-    color: var(--text-color-lightpurple);
+    color: var(--text-color-blue);
     /* border: 1px solid var(--text-color-lightpurple);
     border-radius: 6px; */
     padding: 12px 27px;
@@ -139,7 +139,7 @@ nav a
 nav a:hover
 {
     color: whitesmoke;
-    background: var(--text-color-lightpurple);
+    background: var(--text-color-blue);
     border-radius: 9px;
 }
 
@@ -181,17 +181,27 @@ p
 {
     grid-area: 2 / 2 / 3 / 12;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     border-radius: 9px;
     height: 254px;
-    background: var(--background-off-white)
+    background: rgb(0, 0, 140);
+    margin-bottom: 27px;
 }
 
-.title > h1, h2
+.title > *
 {
+    display: flex;
     color: #3b7ce1;
     letter-spacing: 3px;
+    flex: 1 1 600px;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h3
+{
+    color: var(--text-color-orange);
 }
 
 /* -- W -- */
