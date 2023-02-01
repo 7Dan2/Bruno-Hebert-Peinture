@@ -16,7 +16,7 @@
     --background-kinf-of-white : rgb(190, 190, 190);
     --background-kind-of-grey: rgb(135, 135, 135);
     --background-deep-kind-of-grey: rgb(81, 81, 81);
-    --background-grey-orange: rgb(166, 106, 68);
+    --background-grey-orange: rgb(214, 135, 86);
 }
 
 html
@@ -31,12 +31,17 @@ body
     background: linear-gradient(114deg, var(--background-off-white)0%, var(--background-kinf-of-white) 51%, var(--background-grey-orange) 75%);
 }
 
+.box
+{
+    background: transparent;
+    border-radius: 6px;
+    scroll-margin-top: 9rem;
+}
 /* -- C -- */
 .contact
 {
-    grid-area: 11 / 1 / 12 / 13;
+    grid-area: 13 / 1 / 14 / 13;
     border-bottom: 3px solid var(--text-color-lightpurple);
-    scroll-margin-top: 9rem;
 }
 
 .container
@@ -58,10 +63,17 @@ h3
 
 .image
 {
-    border: 3px solid grey;
-    min-height: 300px;
+   
+   max-width: 350px;  
+   height: auto;
+}
+
+.image > *
+{
+    max-width: 100%;
+    height: auto;
     border-radius: 3px;
-    background: #f4edde;
+    border: 3px solid grey;
     box-shadow: 0 0 9px #fff;
 }
 
@@ -75,7 +87,7 @@ h3
     grid-area: 7 / 1 / 8 / 5
 }
 
-.image3
+/* .image3
 {
     grid-area: 10 / 1 / 11 / 5;
 }
@@ -87,8 +99,13 @@ h3
 
 .image5
 {
-    grid-area: 10 / 8 / 11 / 13;
-}
+    grid-area: 11 / 8 / 12 / 13;
+} */
+
+/* .image6
+{
+    grid-area: 11 / 8 / 12 / 13;
+} */
 
 /* -- L -- */
 .logo
@@ -135,16 +152,20 @@ nav a
 {
     font-size: 1.3rem;
     text-decoration: none;
+    /* flex: 1 1 100px; */
     color: var(--background-off-white);
     /* border: 1px solid var(--text-color-lightpurple);
     border-radius: 6px; */
     padding: 12px 27px;
-    transition: color 300ms ease-in-out;
+    margin-top: 9px;
+    margin-bottom: 9px;
+    background: none;
+    transition: background 300ms ease-in-out;
 }
 
 nav a:hover
 {
-    color: whitesmoke;
+    
     background: var(--background-blue-hebert);
     /* background: var(--text-color-blue); */
     border-radius: 9px;
@@ -157,10 +178,31 @@ nav a:hover
     grid-area: 7 / 5 / 8 / 13;
     border-bottom: 3px solid var(--text-color-blue);
     border-left: 6px solid var(--text-color-blue);
-    border-radius: 6px;
-    background: whitesmoke;
     padding: 5px 20px;
-    scroll-margin-top: 9rem;
+    
+}
+
+.otherPics
+{
+    grid-area: 11 / 1 / 12 / 13 ;
+    display: flex;
+    flex-direction: row;
+
+   
+    
+    flex-wrap: wrap;
+    /* gap: 10px; */
+    
+}
+
+.otherPics > img
+{
+    border-radius: 9px;
+    margin: 3px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    
+    
 }
 
 /* -- P -- */
@@ -177,12 +219,10 @@ p
     grid-area: 8 / 1 / 9 / 13;
     border-bottom: 3px solid green;
     border-left: 6px solid green;
-    border-radius: 6px;
-    background: rgb(225, 225, 225);
     display: flex;
     margin-top: 2rem;
     padding: 5px 20px;
-    scroll-margin-top: 9rem;
+    
 }
 
 /* -- T -- */
@@ -203,9 +243,9 @@ p
     display: flex;
     /* color: #3b7ce1; */
     letter-spacing: 3px;
-    margin: 2px;
-    flex: 1 1 500px;
-    justify-content: space-between;
+    margin: 20px;
+    flex: 1 1 400px;
+    /* justify-content: space-between; */
     align-items: center;
 }
 
@@ -227,14 +267,25 @@ p
     grid-area: 6 / 5 / 7 / 13;
     border-bottom: 3px solid red;
     border-left: 6px solid red;
-    border-radius: 6px;
-    background: whitesmoke;
+    background: transparent;
     padding: 5px 20px;
-    scroll-margin-top: 9rem;
+    
 }
 
-@media only screen and (max-width: 640px) 
+@media only screen and (max-device-width: 640px) 
 {
+    .otherPics
+    {
+        flex-direction: column;
+          
+    }
+
+    .otherPics > img
+    {
+        max-width: 350px;
+    height: auto;
+    }
+
     .image1
     {
         grid-area: 6 / 1 / 7 / 13;
@@ -243,6 +294,7 @@ p
     .whoAmI
     {
         grid-area: 7 / 1 / 8 / 13;
+        scroll-margin-top: 18rem;
     }
 
     .image2
@@ -254,27 +306,25 @@ p
     {
         
         grid-area: 9 / 1 / 10 / 13;
+        scroll-margin-top: 11rem;
     }
 
-    .image3
+  
+    .otherPics
     {
-        grid-area: 10 / 1 / 11 / 13;
+        grid-area: 11 / 1 / 12 / 13;
+        scroll-margin-top: 11rem;
     }
 
     .realisations
     {
-        grid-area: 11 / 1 / 12 / 13;  
+        grid-area: 10 / 1 / 11 / 13; 
+        scroll-margin-top: 11rem; 
     }
 
-    .image4
-    {
-        grid-area: 13 / 1 / 14 / 13;
-    }
+  
 
-    .image5
-    {
-        grid-area: 15 / 1 / 16 / 13;
-    }
+  
 
     .contact
     {
